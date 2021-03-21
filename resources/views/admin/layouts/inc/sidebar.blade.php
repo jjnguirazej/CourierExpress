@@ -30,15 +30,23 @@
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Dashboard
-                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-header">COMPANY MANAGEMENT</li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.company-master.view') }}" class="nav-link {{ Request::is('admin/company-master*') ? 'active' : '' }}">
+                        <i class="nav-icon fa fa-building"></i>
+                        <p>
+                            Company Master
                         </p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <i class="nav-icon far fa-envelope"></i>
+                        <i class="nav-icon ion-person"></i>
                         <p>
-                            Mailbox
+                            User
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
@@ -70,8 +78,8 @@
     <!-- /.sidebar -->
 
     <div class="sidebar-custom">
-        <a href="#" class="btn btn-link"><i class="fas fa-cogs"></i></a>
-        <a href="#" class="btn btn-light hide-on-collapse pos-right">Help</a>
+        <a href="#" class="btn btn-link"><i class="fas fa-globe"></i></a>
+        <a href="#" class="btn btn-link hide-on-collapse pos-right"><i class="fa fa-info-circle"></i></a>
     </div>
     <!-- /.sidebar-custom -->
 </aside>

@@ -15,12 +15,10 @@
                     <img src="{{ asset('asset/dist/img/admin.png') }}" class="img-circle" alt="User Image" width="40" height="40">
                 </div>
             </a>
-            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                <div class="dropdown-divider"></div>
+            <div class="dropdown-menu dropdown-menu-md dropdown-menu-right">
                 <a href="#" class="dropdown-item">
-                    <i class="fas fa-user mr-2"></i> PROFILE
+                    <i class="ion-person mr-2"></i> PROFILE
                 </a>
-                <div class="dropdown-divider"></div>
                 <a href="#" class="dropdown-item">
                     <i class="fas fa-power-off mr-2"></i> LOGOUT
                 </a>

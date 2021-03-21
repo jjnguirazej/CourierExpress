@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="{{ asset('asset/plugins/fontawesome-free/css/all.min.css') }}">
     <!-- overlayScrollbars -->
     <link rel="stylesheet" href="{{ asset('asset/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
+    <!-- Ionicons CDN -->
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     @stack('css')
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('asset/dist/css/adminlte.min.css') }}">
@@ -47,7 +49,6 @@
 
         <!-- Main content -->
         <section class="content">
-
             <div class="container-fluid">
                 <div class="row">
                     @yield('content')
