@@ -61,9 +61,9 @@
 
     <footer class="main-footer">
         <div class="float-right d-none d-sm-block">
-            <b>Version</b> 3.1.0-rc
+            <span>Developed By :</span> <a href="https://facebook.com/hanif.mhc">Hanif</a>
         </div>
-        <strong>Copyright &copy; {{ date('Y') }} <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+        <span>Copyright &copy; {{ date('Y') }} <a href="http://hanif.intels.co">OfficialMHC</a>.</span> All rights reserved.
     </footer>
 
 </div>

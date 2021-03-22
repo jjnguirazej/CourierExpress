@@ -63,7 +63,7 @@ class CompanyMasterController extends Controller
         $image = $request->file('company_logo');
         if (isset($image)) {
             $date = Carbon::now()->toDateString();
-            $image_name = $slug . '-' . $date . '-' . uniqid() . $image->getClientOriginalExtension();
+            $image_name = $slug . '-' . $date . '-' . uniqid() . '.' . $image->getClientOriginalExtension();
             if(!Storage::disk('public')->exists('company')) {
                 Storage::disk('public')->makeDirectory('company');
             }
@@ -139,7 +139,7 @@ class CompanyMasterController extends Controller
         $image = $request->file('company_logo');
         if (isset($image)) {
             $date = Carbon::now()->toDateString();
-            $image_name = $slug . '-' . $date . '-' . uniqid() . $image->getClientOriginalExtension();
+            $image_name = $slug . '-' . $date . '-' . uniqid() . '.' . $image->getClientOriginalExtension();
             if(!Storage::disk('public')->exists('company')) {
                 Storage::disk('public')->makeDirectory('company');
             }
