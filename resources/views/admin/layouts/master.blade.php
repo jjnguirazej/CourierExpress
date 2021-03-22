@@ -20,9 +20,11 @@
     @stack('css')
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('asset/dist/css/adminlte.css') }}">
+    <!-- Custom style -->
+    <link rel="stylesheet" href="{{ asset('asset/dist/css/custom.css') }}">
     @livewireStyles
 </head>
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class="sidebar-mini layout-fixed" style="height: auto;">
 <!-- Site wrapper -->
 <div class="wrapper">
     <!-- Navbar -->
@@ -54,7 +56,7 @@
         </section>
 
         <!-- Main content -->
-        <section class="content">
+        <section class="content mt-3">
             <div class="container-fluid">
                 <div class="row">
                     @yield('content')
@@ -67,7 +69,7 @@
 
     <footer class="main-footer">
         <div class="float-right d-none d-sm-block">
-            <span>Developed By :</span> <a href="https://facebook.com/hanif.mhc">Hanif</a>
+            <span>DEVELOPED BY :</span> <a href="https://facebook.com/hanif.mhc">HANIF</a>
         </div>
         <span>Copyright &copy; {{ date('Y') }} <a href="http://hanif.intels.co">OfficialMHC</a>.</span> All rights reserved.
     </footer>

@@ -5048,6 +5048,9 @@ input[type="button"].btn-block {
   display: -ms-flexbox;
   display: flex;
   padding-left: 0;
+  font-size: .75rem;
+  margin-top: 5px !important;
+  margin-bottom: -10px !important;
   list-style: none;
   border-radius: 0.25rem;
 }

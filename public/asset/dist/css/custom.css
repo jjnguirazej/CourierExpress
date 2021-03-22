@@ -1,0 +1,46 @@
+body {
+    font-family: "Nunito", sans-serif;
+    font-size: .8rem;
+}
+.fa {
+    font-size: .75rem !important;
+}
+nav .nav .nav-item .nav-link {
+    text-transform: uppercase;
+    color: #FFFFFF !important;
+    background-color: #343a40;
+    border-radius: unset;
+}
+nav .nav .nav-item .nav-link:hover{
+    background-color: #ffffff;
+    color: #343a40 !important;
+}
+/*.main-sidebar {*/
+/*    background-color: #343a40;*/
+/*}*/
+.content-header {
+    background-color: #efefef;
+    height: 40px;
+    text-transform: uppercase;
+}
+.content-header h1 {
+    font-size: .75rem;
+    margin-top: -2px;
+    font-weight: bold;
+}
+.content-header .breadcrumb {
+    font-size: .7rem;
+    margin-top: -10px;
+    font-weight: bold;
+}
+form label {
+    font-weight: normal !important;
+}
+.card .card-header #heading{
+    font-size: .95rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.dropdown .dropdown-menu .dropdown-item {
+    font-size: .75rem;
+}
