@@ -43,30 +43,24 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon ion-person"></i>
+                    <a href="#" class="nav-link {{ Request::is('admin/branch-master*') ? 'active' : '' }}">
+                        <i class="nav-icon fa fa-code-branch"></i>
                         <p>
-                            User
+                            Branch Master
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="../mailbox/mailbox.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Inbox</p>
+                            <a href="{{ route('admin.branch-master.index') }}" class="nav-link {{ Request::is('admin/branch-master') ? 'active' : '' }}">
+                                <i class="fa fa-wrench nav-icon"></i>
+                                <p>Manage Branches</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="../mailbox/compose.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Compose</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="../mailbox/read-mail.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Read</p>
+                            <a href="{{ route('admin.branch-master.create') }}" class="nav-link {{ Request::is('admin/branch-master/create') ? 'active' : '' }}">
+                                <i class="fa fa-plus nav-icon"></i>
+                                <p>Add New Branch</p>
                             </a>
                         </li>
                     </ul>
@@ -77,9 +71,4 @@
     </div>
     <!-- /.sidebar -->
 
-    <div class="sidebar-custom">
-        <a href="#" class="btn btn-link"><i class="fas fa-globe"></i></a>
-        <a href="#" class="btn btn-link hide-on-collapse pos-right"><i class="fa fa-info-circle"></i></a>
-    </div>
-    <!-- /.sidebar-custom -->
 </aside>

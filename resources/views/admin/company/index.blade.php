@@ -64,7 +64,7 @@
                     <div class="col-sm-12 col-md-3">
                         <div class="form-group">
                             <label for="company_email">Company Email</label>
-                            <input type="text" name="company_email" id="company_email" class="form-control rounded-0"
+                            <input type="email" name="company_email" id="company_email" class="form-control rounded-0"
                                 @if(count ($companies_master) > 0)
                                    value="{{ $company_master->company_email }}"
                                 @endif

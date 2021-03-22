@@ -14,9 +14,13 @@
     <link rel="stylesheet" href="{{ asset('asset/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
     <!-- Ionicons CDN -->
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Datatable CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
     @stack('css')
     <!-- Theme style -->
-    <link rel="stylesheet" href="{{ asset('asset/dist/css/adminlte.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('asset/dist/css/adminlte.css') }}">
+    @livewireStyles
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <!-- Site wrapper -->
@@ -37,12 +41,14 @@
                     <div class="col-sm-6">
                         <h1>@yield('title')</h1>
                     </div>
-                    <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Home</a></li>
-                            <li class="breadcrumb-item active">@yield('title')</li>
-                        </ol>
-                    </div>
+                    @if(!Request::is('admin/dashboard'))
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Home</a></li>
+                                <li class="breadcrumb-item active">@yield('title')</li>
+                            </ol>
+                        </div>
+                    @endif
                 </div>
             </div><!-- /.container-fluid -->
         </section>
@@ -75,10 +81,15 @@
 <script src="{{ asset('asset/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <!-- overlayScrollbars -->
 <script src="{{ asset('asset/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
+<!-- Datatable -->
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
 @stack('js')
 <!-- AdminLTE App -->
 <script src="{{ asset('asset/dist/js/adminlte.min.js') }}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{ asset('asset/dist/js/demo.js') }}"></script>
+@livewireScripts
 </body>
 </html>
