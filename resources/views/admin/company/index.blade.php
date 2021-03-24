@@ -60,19 +60,6 @@
                         </div>
                         <div class="col-sm-12 col-md-3">
                             <div class="form-group">
-                                <label for="company_phone">Company Phone</label>
-                                <input type="number" name="company_phone" id="company_phone" class="form-control form-control-sm rounded-0"
-                                    @if(count ($companies_master) > 0)
-                                       value="{{ $company_master->company_phone }}"
-                                    @endif
-                                >
-                                @error('company_phone')
-                                <small class="text-danger">{{ $message }}</small>
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-3">
-                            <div class="form-group">
                                 <label for="company_email">Company Email</label>
                                 <input type="email" name="company_email" id="company_email" class="form-control form-control-sm rounded-0"
                                     @if(count ($companies_master) > 0)
@@ -80,6 +67,19 @@
                                     @endif
                                 >
                                 @error('company_email')
+                                <small class="text-danger">{{ $message }}</small>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+                            <div class="form-group">
+                                <label for="company_phone">Company Phone</label>
+                                <input type="number" name="company_phone" id="company_phone" class="form-control form-control-sm rounded-0"
+                                       @if(count ($companies_master) > 0)
+                                       value="{{ $company_master->company_phone }}"
+                                    @endif
+                                >
+                                @error('company_phone')
                                 <small class="text-danger">{{ $message }}</small>
                                 @enderror
                             </div>

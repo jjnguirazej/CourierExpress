@@ -25,8 +25,14 @@ class Edit extends Component
         $role = Role::findOrFail($this->role_id);
         $role->name = $this->name;
 
-        $role->save();
-        session()->flash('update', 'Role : ' . $role->name . ' Updated Successfully!');
+        if($role->isDirty('name')) {
+            $role->save();
+            session()->flash('update', 'Role : ' . $role->name . ' UPDATED Successfully!');
+        } else {
+            session()->flash('nothing-update', 'Nothing has been UPDATED!');
+            return back();
+        }
+
         $this->reset();
         return redirect()->route('admin.roles.index');
     }

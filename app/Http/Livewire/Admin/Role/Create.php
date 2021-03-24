@@ -18,7 +18,7 @@ class Create extends Component
         $role = new Role();
         $role->name = $this->name;
         $role->save();
-        session()->flash('success', 'Role Created Successfully');
+        session()->flash('success', 'Role CREATED Successfully');
         $this->reset();
         return redirect()->route('admin.roles.index');
     }

@@ -27,7 +27,8 @@ class RoleController extends Controller
 
     public function destroy($id)
     {
-        Role::findOrFail($id)->delete();
-        return redirect()->back()->with('delete', 'Role Deleted Successfully');
+        $role = Role::findOrFail($id);
+        $role->delete();
+        return redirect()->back()->with('delete', 'Role : ' . $role->name . ' DELETED Successfully');
     }
 }

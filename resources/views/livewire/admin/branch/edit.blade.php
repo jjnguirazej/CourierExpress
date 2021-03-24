@@ -1,6 +1,11 @@
 <div>
     <div class="row">
         <div class="col-md-12">
+            @include('admin.alert')
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
             <div class="card card-dark card-outline rounded-0">
                 <div class="card-header">
                     <div class="row">

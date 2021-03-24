@@ -31,7 +31,6 @@ Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin', 'mi
     Route::get('roles/', [RoleController::class, 'index'])->name('roles.index');
     Route::get('roles/create', [RoleController::class, 'create'])->name('roles.create');
     Route::get('roles/{id}/edit/', [RoleController::class, 'edit'])->name('roles.edit');
-    Route::put('roles/{id}', [RoleController::class, 'update'])->name('roles.update');
     Route::delete('roles/delete/{id}', [RoleController::class, 'destroy'])->name('roles.destroy');
 });
 

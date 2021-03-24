@@ -48,12 +48,12 @@
                                         <a href="{{ route('admin.branch-master.edit', $branch->id) }}" class="btn btn-xs btn-default rounded-0 mr-2">
                                             <i class="ion-edit"></i>
                                         </a>
-                                        <a href="javascript:void(0)" onclick="event.preventDefault(); document.getElementById('delete-form-{{ $branch->id }}').submit();" class="btn btn-xs btn-danger rounded-0">
-                                            <i class="ion-close"></i>
-                                        </a>
-                                        <form id="delete-form-{{ $branch->id }}" action="{{ route('admin.branch-master.destroy', $branch->id) }}" method="POST" style="display: none">
+                                        <form action="{{ route('admin.branch-master.destroy', $branch->id) }}" method="POST" onclick="return confirm('Are you sure to DELETE this?')">
                                             @csrf
                                             @method('DELETE')
+                                            <button type="submit" class="btn btn-xs btn-danger rounded-0">
+                                                <i class="ion-close"></i>
+                                            </button>
                                         </form>
                                     </div>
                                 </td>

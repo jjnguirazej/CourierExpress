@@ -40,7 +40,7 @@ class Create extends Component
         $branch->branch_country = $this->branch_country;
 
         $branch->save();
-        session()->flash('success', 'Branch : ' . $branch->branch_name . ' Created Successfully!');
+        session()->flash('success', 'Branch : ' . $branch->branch_name . ' CREATED Successfully!');
         $this->reset();
         return redirect()->route('admin.branch-master.index');
     }

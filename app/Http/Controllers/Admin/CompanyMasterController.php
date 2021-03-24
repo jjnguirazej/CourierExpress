@@ -47,15 +47,15 @@ class CompanyMasterController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'company_name' => 'required|string',
             'company_logo' => 'required|image|mimes:jpg,jpeg,png,bmp',
+            'company_name' => 'required|string',
+            'company_email' => 'required|email',
+            'company_phone' => 'required|min:11|max:11',
             'company_address' => 'required',
             'company_city' => 'required',
             'company_state' => 'required',
             'company_zip_code' => 'required',
             'company_country' => 'required|string',
-            'company_phone' => 'required|min:11|max:11',
-            'company_email' => 'required|email',
             'company_gst' => 'required|string',
         ]);
 
@@ -75,19 +75,19 @@ class CompanyMasterController extends Controller
         }
 
         $company = new CompanyMaster();
-        $company->company_name = $request->company_name;
         $company->company_logo = $image_name;
+        $company->company_name = $request->company_name;
+        $company->company_email = $request->company_email;
+        $company->company_phone = $request->company_phone;
         $company->company_address = $request->company_address;
         $company->company_city = $request->company_city;
         $company->company_state = $request->company_state;
         $company->company_zip_code = $request->company_zip_code;
         $company->company_country = $request->company_country;
-        $company->company_phone = $request->company_phone;
-        $company->company_email = $request->company_email;
         $company->company_gst = $request->company_gst;
 
         $company->save();
-        return redirect()->back()->with('success', 'Company Details Saved Successfully!');
+        return redirect()->back()->with('success', 'Company Details CREATED Successfully!');
     }
 
     /**
@@ -122,15 +122,15 @@ class CompanyMasterController extends Controller
     public function update(Request $request)
     {
         $this->validate($request, [
-            'company_name' => 'required|string',
             'company_logo' => 'image|mimes:jpg,jpeg,png,bmp',
+            'company_name' => 'required|string',
+            'company_email' => 'required|email',
+            'company_phone' => 'required|min:11|max:11',
             'company_address' => 'required',
             'company_city' => 'required',
             'company_state' => 'required',
             'company_zip_code' => 'required',
             'company_country' => 'required|string',
-            'company_phone' => 'required|min:11|max:11',
-            'company_email' => 'required|email',
             'company_gst' => 'required|string',
         ]);
         $company = CompanyMaster::find(1);
@@ -153,18 +153,25 @@ class CompanyMasterController extends Controller
             $image_name = $company->company_logo;
         }
 
-        $company->company_name = $request->company_name;
         $company->company_logo = $image_name;
+        $company->company_name = $request->company_name;
+        $company->company_email = $request->company_email;
+        $company->company_phone = $request->company_phone;
         $company->company_address = $request->company_address;
         $company->company_city = $request->company_city;
         $company->company_state = $request->company_state;
         $company->company_zip_code = $request->company_zip_code;
         $company->company_country = $request->company_country;
-        $company->company_phone = $request->company_phone;
-        $company->company_email = $request->company_email;
         $company->company_gst = $request->company_gst;
 
-        $company->save();
+        if($company->isDirty('company_logo', 'company_name', 'company_email', 'company_phone', 'company_address', 'company_city', 'company_state', 'company_zip_code', 'company_country', 'company_gst')) {
+            $company->save();
+            session()->flash('update', 'Branch : ' . $company->company_name . ' UPDATED Successfully!');
+        } else {
+            session()->flash('nothing-update', 'Nothing has been UPDATED!');
+            return back();
+        }
+
         return redirect()->back()->with('update', 'Company Details Updated Successfully!');
     }
 

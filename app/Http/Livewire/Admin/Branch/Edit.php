@@ -53,8 +53,14 @@ class Edit extends Component
         $branch->branch_zip_code = $this->branch_zip_code;
         $branch->branch_country = $this->branch_country;
 
-        $branch->save();
-        session()->flash('update', 'Branch : ' . $branch->branch_name . ' Updated Successfully!');
+        if($branch->isDirty('branch_name', 'branch_email', 'branch_phone', 'branch_address', 'branch_city', 'branch_state', 'branch_zip_code', 'branch_country')) {
+            $branch->save();
+            session()->flash('update', 'Branch : ' . $branch->branch_name . ' UPDATED Successfully!');
+        } else {
+            session()->flash('nothing-update', 'Nothing has been UPDATED!');
+            return back();
+        }
+
         $this->reset();
         return redirect()->route('admin.branch-master.index');
     }
