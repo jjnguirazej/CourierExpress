@@ -19,7 +19,7 @@
                             <h5 class="m-0" id="heading">All Branch List</h5>
                         </div>
                         <div class="col-sm-6">
-                            <a href="{{ route('admin.branch-master.create') }}" class="btn btn-xs btn-dark rounded-0 float-right"><i class="ion-plus"></i> ADD NEW</a>
+                            <a href="{{ route('admin.branches.create') }}" class="btn btn-xs btn-dark rounded-0 float-right"><i class="ion-plus"></i> ADD NEW</a>
                         </div>
                     </div>
                 </div>
@@ -45,10 +45,10 @@
                                 <td>{{ $branch->branch_address }}</td>
                                 <td>
                                     <div class="btn-group">
-                                        <a href="{{ route('admin.branch-master.edit', $branch->id) }}" class="btn btn-xs btn-default rounded-0 mr-2">
+                                        <a href="{{ route('admin.branches.edit', $branch->id) }}" class="btn btn-xs btn-default rounded-0 mr-2">
                                             <i class="ion-edit"></i>
                                         </a>
-                                        <form action="{{ route('admin.branch-master.destroy', $branch->id) }}" method="POST" onclick="return confirm('Are you sure to DELETE this?')">
+                                        <form action="{{ route('admin.branches.destroy', $branch->id) }}" method="POST" onclick="return confirm('Are you sure to DELETE this?')">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-xs btn-danger rounded-0">

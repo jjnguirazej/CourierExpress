@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\Admin\BranchMasterController;
 use App\Http\Controllers\Admin\CompanyMasterController;
 use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Admin\BranchController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -21,17 +21,17 @@ Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin', 'mi
     Route::put('company-master', [CompanyMasterController::class, 'update'])->name('company-master.update');
 
     // ----- Branch Master Routes ----- //
-    Route::get('branch-master/', [BranchMasterController::class, 'index'])->name('branch-master.index');
-    Route::get('branch-master/create', [BranchMasterController::class, 'create'])->name('branch-master.create');
-    Route::get('branch-master/{id}', [BranchMasterController::class, 'show'])->name('branch-master.show');
-    Route::get('branch-master/{id}/edit/', [BranchMasterController::class, 'edit'])->name('branch-master.edit');
-    Route::delete('branch-master/delete/{id}', [BranchMasterController::class, 'destroy'])->name('branch-master.destroy');
+    Route::get('branches/', [BranchController::class, 'index'])->name('branches.index');
+    Route::get('branches/create', [BranchController::class, 'create'])->name('branches.create');
+    Route::get('branches/{id}', [BranchController::class, 'show'])->name('branches.show');
+    Route::get('branches/{id}/edit/', [BranchController::class, 'edit'])->name('branches.edit');
+    Route::delete('branches/{id}', [BranchController::class, 'destroy'])->name('branches.destroy');
 
     // ----- Role Routes ----- //
     Route::get('roles/', [RoleController::class, 'index'])->name('roles.index');
     Route::get('roles/create', [RoleController::class, 'create'])->name('roles.create');
     Route::get('roles/{id}/edit/', [RoleController::class, 'edit'])->name('roles.edit');
-    Route::delete('roles/delete/{id}', [RoleController::class, 'destroy'])->name('roles.destroy');
+    Route::delete('roles/{id}', [RoleController::class, 'destroy'])->name('roles.destroy');
 });
 
 Route::group(['as' => 'stuff.', 'prefix' => 'stuff', 'namespace' => 'Stuff', 'middleware' => ['auth', 'stuff']], function () {

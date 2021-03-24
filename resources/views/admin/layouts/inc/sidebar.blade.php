@@ -45,7 +45,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('admin.branch-master.index') }}" class="nav-link">
+                    <a href="{{ route('admin.branches.index') }}" class="nav-link">
                         <i class="nav-icon fa fa-code-branch"></i>
                         <p>
                             Branch

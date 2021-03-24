@@ -9,8 +9,6 @@
     <!-- Default box -->
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Title</h3>
-
             <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                     <i class="fas fa-minus"></i>
@@ -20,14 +18,10 @@
                 </button>
             </div>
         </div>
-        <div class="card-body">
-            Start creating your amazing application!
+        <div class="card-body text-center">
+            <h6 class="text-bold">WELCOME TO DASHBOARD! <span class="text-danger ml-5"><i class="ion-alert"></i> THIS PROJECT IS UNDER DEVELOPMENT!</span></h6>
         </div>
         <!-- /.card-body -->
-        <div class="card-footer">
-            Footer
-        </div>
-        <!-- /.card-footer-->
     </div>
     <!-- /.card -->
 </div>

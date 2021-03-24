@@ -12,13 +12,13 @@ class Create extends Component
     public function store()
     {
         $this->validate([
-            'name' => 'required|string'
+            'name' => 'required|string|unique:roles,name'
         ]);
 
         $role = new Role();
         $role->name = $this->name;
         $role->save();
-        session()->flash('success', 'Role CREATED Successfully');
+        session()->flash('success', 'Role CREATED Successfully!');
         $this->reset();
         return redirect()->route('admin.roles.index');
     }

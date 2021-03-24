@@ -19,12 +19,11 @@ class Edit extends Component
     public function update()
     {
         $this->validate([
-            'name' => 'required|string',
+            'name' => "required|string|unique:roles,name,$this->role_id"
         ]);
 
         $role = Role::findOrFail($this->role_id);
         $role->name = $this->name;
-
         if($role->isDirty('name')) {
             $role->save();
             session()->flash('update', 'Role : ' . $role->name . ' UPDATED Successfully!');

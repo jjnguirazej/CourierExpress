@@ -33,9 +33,9 @@ class Edit extends Component
     public function update()
     {
         $this->validate([
-            'branch_name' => 'required|string',
-            'branch_email' => 'required|email',
-            'branch_phone' => 'required|min:11|max:11',
+            'branch_name' => "required|string|unique:branches,branch_name,$this->branch_id",
+            'branch_email' => "required|email|unique:branches,branch_email,$this->branch_id",
+            'branch_phone' => "required|min:11|max:11|unique:branches,branch_phone,$this->branch_id",
             'branch_address' => 'required',
             'branch_city' => 'required|string',
             'branch_state' => 'required|string',
@@ -62,7 +62,7 @@ class Edit extends Component
         }
 
         $this->reset();
-        return redirect()->route('admin.branch-master.index');
+        return redirect()->route('admin.branches.index');
     }
 
     public function render()

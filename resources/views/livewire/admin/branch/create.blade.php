@@ -8,7 +8,7 @@
                             <h5 class="m-0" id="heading">Create Branch Form</h5>
                         </div>
                         <div class="col-sm-6">
-                            <a href="{{ route('admin.branch-master.index') }}" class="float-right">GO BACK TO MANAGE BRANCH <i class="fa fa-long-arrow-alt-right"></i></a>
+                            <a href="{{ route('admin.branches.index') }}" class="float-right">GO BACK TO MANAGE BRANCH <i class="fa fa-long-arrow-alt-right"></i></a>
                         </div>
                     </div>
                 </div>
