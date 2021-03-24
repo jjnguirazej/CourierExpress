@@ -12,8 +12,7 @@ nav .nav .nav-item .nav-link {
     border-radius: unset;
 }
 nav .nav .nav-item .nav-link:hover{
-    background-color: #ffffff;
-    color: #343a40 !important;
+    color: #ababab !important;
 }
 /*.main-sidebar {*/
 /*    background-color: #343a40;*/
@@ -43,4 +42,15 @@ form label {
 }
 .dropdown .dropdown-menu .dropdown-item {
     font-size: .75rem;
+}
+.nav-sidebar .nav-header {
+    height: 45px;
+    margin-top: -28px;
+    background-color: #4d5358;
+    color: #b5b5b5;
+    font-size: .7rem;
+    font-weight: bold;
+}
+.btn {
+    font-weight: bold;
 }

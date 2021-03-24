@@ -58,9 +58,7 @@
         <!-- Main content -->
         <section class="content mt-3">
             <div class="container-fluid">
-                <div class="row">
-                    @yield('content')
-                </div>
+                @yield('content')
             </div>
         </section>
         <!-- /.content -->

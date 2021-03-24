@@ -35,6 +35,7 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-header">COMPANY MANAGEMENT</li>
                 <li class="nav-item">
                     <a href="{{ route('admin.company-master.view') }}" class="nav-link">
                         <i class="nav-icon fa fa-building"></i>
@@ -44,27 +45,21 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{ route('admin.branch-master.index') }}" class="nav-link">
                         <i class="nav-icon fa fa-code-branch"></i>
                         <p>
                             Branch
-                            <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{ route('admin.branch-master.create') }}" class="nav-link">
-                                <i class="fa fa-plus nav-icon ml-4"></i>
-                                <p>Create New Branch</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('admin.branch-master.index') }}" class="nav-link">
-                                <i class="fa fa-wrench nav-icon ml-4"></i>
-                                <p>Manage Branches</p>
-                            </a>
-                        </li>
-                    </ul>
+                </li>
+                <li class="nav-header">USER MANAGEMENT</li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.roles.index') }}" class="nav-link">
+                        <i class="nav-icon fa fa-bars"></i>
+                        <p>
+                            Role
+                        </p>
+                    </a>
                 </li>
             </ul>
         </nav>
