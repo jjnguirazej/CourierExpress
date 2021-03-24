@@ -15,7 +15,7 @@ class CreateCompanyMastersTable extends Migration
     {
         Schema::create('company_masters', function (Blueprint $table) {
             $table->id();
-            $table->string('company_logo')->default('default.png');
+            $table->string('company_logo')->nullable();
             $table->string('company_name');
             $table->string('company_email');
             $table->string('company_phone');

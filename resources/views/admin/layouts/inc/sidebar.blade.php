@@ -2,7 +2,7 @@
     <!-- Brand Logo -->
     <div class="brand-logo bg-gradient-gray-dark">
         <a href="" class="brand-link">
-            <img src="{{ asset('asset/dist/img/logo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle">
+            <img src="{{ asset('asset/dist/img/logo1.png') }}" alt="AdminLTE Logo" class="brand-image">
             <span class="brand-text font-weight-light" style="font-family: 'Nunito', sans-serif; color: #ffffff">CourierE<span style="color: red">x</span>press</span>
         </a>
     </div>
@@ -58,6 +58,14 @@
                         <i class="nav-icon fa fa-bars"></i>
                         <p>
                             Role
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.users.index') }}" class="nav-link">
+                        <i class="nav-icon fa fa-user"></i>
+                        <p>
+                            User
                         </p>
                     </a>
                 </li>

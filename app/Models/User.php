@@ -58,4 +58,17 @@ class User extends Authenticatable
     {
         return $this->belongsTo('App\Models\Role');
     }
+
+    public function branch()
+    {
+        return $this->belongsTo('App\Models\Branch');
+    }
+
+    public function isAdmin()
+    {
+        if ($this->role->name == 'Admin' && $this->status == 1) {
+            return true;
+        }
+        return false;
+    }
 }

@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\CompanyMasterController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\BranchController;
+use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -32,6 +33,12 @@ Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin', 'mi
     Route::get('roles/create', [RoleController::class, 'create'])->name('roles.create');
     Route::get('roles/{id}/edit/', [RoleController::class, 'edit'])->name('roles.edit');
     Route::delete('roles/{id}', [RoleController::class, 'destroy'])->name('roles.destroy');
+
+    // ----- User Routes ----- //
+    Route::get('users/', [UserController::class, 'index'])->name('users.index');
+    Route::get('users/create', [UserController::class, 'create'])->name('users.create');
+    Route::get('users/{id}/edit', [UserController::class, 'edit'])->name('users.edit');
+    Route::delete('users/{id}', [UserController::class, 'destroy'])->name('users.destroy');
 });
 
 Route::group(['as' => 'stuff.', 'prefix' => 'stuff', 'namespace' => 'Stuff', 'middleware' => ['auth', 'stuff']], function () {

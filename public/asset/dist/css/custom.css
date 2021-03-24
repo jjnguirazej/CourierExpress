@@ -7,7 +7,7 @@ body {
 }
 nav .nav .nav-item .nav-link {
     text-transform: uppercase;
-    color: #FFFFFF !important;
+    color: #EFEFEF !important;
     background-color: #343a40;
     border-radius: unset;
 }

@@ -8,7 +8,7 @@
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ asset('asset/dist/img/favicon.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('asset/dist/img/logo1.png') }}" type="image/x-icon">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{ asset('asset/plugins/fontawesome-free/css/all.min.css') }}">
     <!-- icheck bootstrap -->
